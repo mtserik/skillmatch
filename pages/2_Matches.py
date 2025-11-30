@@ -94,10 +94,13 @@ def render_match_card(needy, helper, ponto):
         c1.markdown("<div class='role'>🆘 Precisa de ajuda</div>", unsafe_allow_html=True)
 
         foto1 = os.path.join(FOTO_DIR, f"{needy['Nome'].upper()}_{needy['Area'].upper()}.jpg")
-        if os.path.exists(foto1):
+        
+        if helper['Nome'].upper() in ['JACKELINE', 'JACKE', 'JACK']:
+            c2.image(os.path.join(FOTO_DIR, f"{helper['Nome'].upper()}.jpg"), width=100)
+        elif os.path.exists(foto1):
             c1.image(foto1, width=100)
         else:
-            c1.markdown("<div class='small'>Sem foto</div>", unsafe_allow_html=True)
+            c2.image(os.path.join(FOTO_DIR, "SEM_FOTO.jpg"), width=100)
 
         c1.markdown(f"<div class='name'>{needy['Nome']}</div>", unsafe_allow_html=True)
         c1.markdown(f"<div class='small'>Área: {needy['Area']}</div>", unsafe_allow_html=True)
@@ -108,10 +111,13 @@ def render_match_card(needy, helper, ponto):
         c2.markdown("<div class='role-helper'>🤝 Pode ajudar</div>", unsafe_allow_html=True)
 
         foto2 = os.path.join(FOTO_DIR, f"{helper['Nome'].upper()}_{helper['Area'].upper()}.jpg")
-        if os.path.exists(foto2):
+        
+        if helper['Nome'].upper() in ['JACKELINE', 'JACKE', 'JACK']:
+            c2.image(os.path.join(FOTO_DIR, f"{helper['Nome'].upper()}.jpg"), width=100)
+        elif os.path.exists(foto2):
             c2.image(foto2, width=100)
         else:
-            c2.markdown("<div class='small'>Sem foto</div>", unsafe_allow_html=True)
+            c2.image(os.path.join(FOTO_DIR, "SEM_FOTO.jpg"), width=100)
 
         c2.markdown(f"<div class='name'>{helper['Nome']}</div>", unsafe_allow_html=True)
         c2.markdown(f"<div class='small'>Área: {helper['Area']}</div>", unsafe_allow_html=True)

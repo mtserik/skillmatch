@@ -12,7 +12,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.markdown("<div class='main-title'>🔗 Match Maker</div>", unsafe_allow_html=True)
+st.markdown("<div class='main-title'>🫱🏼‍🫲🏻 Skill Match</div>", unsafe_allow_html=True)
 
 if st.button("👉 Preencher Formulário", use_container_width=True):
     st.switch_page("pages/1_Formulario.py")

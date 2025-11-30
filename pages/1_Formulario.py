@@ -16,8 +16,8 @@ st.markdown("""
 st.markdown("<div class='title'>📝 Preencha seu Perfil</div>", unsafe_allow_html=True)
 
 # Perguntas
-nome = st.text_input("Nome completo")
-area = st.selectbox("Área", ["Planning", "RTM", "Pricing", "Produtividade"])
+nome = st.text_input("Primeiro Nome")
+area = st.selectbox("Área", ["Planning", "RTM", "Pricing", "Produtividade", "Novos Canais", "OOH_Exportação"])
 
 fortes_lista = ["Liderança", "Comunicação", "Criatividade", "Tecnologia", "Organização"]
 fracos_lista = ["Liderança", "Comunicação", "Criatividade", "Tecnologia", "Organização"]
